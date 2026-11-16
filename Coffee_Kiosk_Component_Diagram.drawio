@@ -1,0 +1,102 @@
+<mxfile host="app.diagrams.net" modified="2026-11-16T18:00:00.000Z" agent="Mozilla/5.0" version="24.0.0" type="device">
+  <diagram id="coffee_kiosk_component_diagram" name="Coffee Kiosk Component Diagram">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title Block -->
+        <mxCell id="title" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot; color=&quot;#1e3a8a&quot;&gt;Coffee Kiosk System — UML Component Diagram&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot; style=&quot;font-size: 11px;&quot;&gt;Architectural Pattern: 3-Tier Layered Architecture | Student: Yashwanth (SRN: PES2UG24AM190)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="20" width="600" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== 1. PRESENTATION LAYER ==================== -->
+        <mxCell id="layer_pres" value="&amp;lt;&amp;lt;layer&amp;gt;&amp;gt; Presentation Layer" style="swimlane;whiteSpace=wrap;html=1;startSize=28;fillColor=#f8fafc;strokeColor=#64748b;strokeWidth=1.5;dashed=1;fontStyle=1;fontSize=12;fontColor=#1e293b;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="960" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- User Interface Component -->
+        <mxCell id="comp_ui" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;User Interface Component&lt;/b&gt;&#xa;&lt;font color=&quot;#64748b&quot;&gt;[Touchscreen UI / Menu Display / Order Selection]&lt;/font&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#1e3a8a;strokeWidth=2;fontColor=#0f172a;fontSize=11;shape=component;align=center;spacingLeft=10;" vertex="1" parent="layer_pres">
+          <mxGeometry x="280" y="45" width="400" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== 2. BUSINESS LAYER ==================== -->
+        <mxCell id="layer_biz" value="&amp;lt;&amp;lt;layer&amp;gt;&amp;gt; Business Layer" style="swimlane;whiteSpace=wrap;html=1;startSize=28;fillColor=#f8fafc;strokeColor=#64748b;strokeWidth=1.5;dashed=1;fontStyle=1;fontSize=12;fontColor=#1e293b;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="100" y="270" width="960" height="230" as="geometry" />
+        </mxCell>
+
+        <!-- Payment Service Component -->
+        <mxCell id="comp_pay" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Payment Service Component&lt;/b&gt;&#xa;&lt;font color=&quot;#64748b&quot;&gt;[Credit Card Processing / PCI Gateway]&lt;/font&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#1e3a8a;strokeWidth=2;fontColor=#0f172a;fontSize=11;shape=component;align=center;spacingLeft=10;" vertex="1" parent="layer_biz">
+          <mxGeometry x="30" y="65" width="260" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- Order Manager Component -->
+        <mxCell id="comp_order" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Order Manager Component&lt;/b&gt;&#xa;&lt;font color=&quot;#64748b&quot;&gt;[Order Processing / State Machine / Total Calculator]&lt;/font&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#1e3a8a;strokeWidth=2;fontColor=#0f172a;fontSize=11;shape=component;align=center;spacingLeft=10;" vertex="1" parent="layer_biz">
+          <mxGeometry x="340" y="65" width="280" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- Receipt Printer Component -->
+        <mxCell id="comp_printer" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Receipt Printer Component&lt;/b&gt;&#xa;&lt;font color=&quot;#64748b&quot;&gt;[Hardware Driver / Print Job Formatting]&lt;/font&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#1e3a8a;strokeWidth=2;fontColor=#0f172a;fontSize=11;shape=component;align=center;spacingLeft=10;" vertex="1" parent="layer_biz">
+          <mxGeometry x="670" y="65" width="260" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== 3. DATA LAYER ==================== -->
+        <mxCell id="layer_data" value="&amp;lt;&amp;lt;layer&amp;gt;&amp;gt; Data Layer" style="swimlane;whiteSpace=wrap;html=1;startSize=28;fillColor=#f8fafc;strokeColor=#64748b;strokeWidth=1.5;dashed=1;fontStyle=1;fontSize=12;fontColor=#1e293b;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="100" y="540" width="960" height="170" as="geometry" />
+        </mxCell>
+
+        <!-- Database Component -->
+        <mxCell id="comp_db" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&#xa;&lt;b&gt;Database Component&lt;/b&gt;&#xa;&lt;font color=&quot;#64748b&quot;&gt;[Menu Catalog DB / Pricing Rules / Transaction &amp;amp; Audit Logs]&lt;/font&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#1e3a8a;strokeWidth=2;fontColor=#0f172a;fontSize=11;shape=component;align=center;spacingLeft=10;" vertex="1" parent="layer_data">
+          <mxGeometry x="280" y="50" width="400" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== INTERFACES & CONNECTORS ==================== -->
+
+        <!-- 1. Order Interface (Between UI and Order Manager) -->
+        <mxCell id="conn_order" value="&lt;b&gt;Order Interface (IOrder)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;submitOrder(), selectCoffee(type, size)&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#1e3a8a;strokeWidth=1.8;endArrow=oval;endFill=1;startArrow=halfCircle;startFill=0;" edge="1" parent="1" source="comp_ui" target="comp_order">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 2. Payment Interface (Between Order Manager and Payment Service) -->
+        <mxCell id="conn_pay" value="&lt;b&gt;Payment Interface (IPayment)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;processCardPayment(amount)&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#1e3a8a;strokeWidth=1.8;endArrow=oval;endFill=1;startArrow=halfCircle;startFill=0;" edge="1" parent="1" source="comp_order" target="comp_pay">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 3. Receipt Interface (Between Order Manager and Receipt Printer) -->
+        <mxCell id="conn_rec" value="&lt;b&gt;Receipt Interface (IReceipt)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;printReceipt(orderSummary)&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#1e3a8a;strokeWidth=1.8;endArrow=oval;endFill=1;startArrow=halfCircle;startFill=0;" edge="1" parent="1" source="comp_order" target="comp_printer">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 4. Database Interface (Between Order Manager and Database) -->
+        <mxCell id="conn_db" value="&lt;b&gt;Database Interface (IDataAccess)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;recordTransaction(), logAudit()&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#1e3a8a;strokeWidth=1.8;endArrow=oval;endFill=1;startArrow=halfCircle;startFill=0;" edge="1" parent="1" source="comp_order" target="comp_db">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 5. Menu Catalog Interface (Between UI and Database) -->
+        <mxCell id="conn_menu" value="&lt;b&gt;Menu Catalog Interface (IMenuCatalog)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;fetchMenu(), getPricing()&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#0369a1;strokeWidth=1.5;dashed=1;endArrow=oval;endFill=1;startArrow=halfCircle;startFill=0;" edge="1" parent="1" source="comp_ui" target="comp_db">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="162" />
+              <mxPoint x="1000" y="630" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend" value="&lt;b&gt;UML Component Legend:&lt;/b&gt;  [Box] = Modular Component |  -(◯ = Provided Interface (Ball) |  -(⌒ = Required Interface (Socket) |  - - &amp;gt; = &amp;lt;&amp;lt;use&amp;gt;&amp;gt; Dependency" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#94a3b8;fontColor=#334155;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="100" y="730" width="960" height="30" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
